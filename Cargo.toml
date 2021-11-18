@@ -1,6 +1,6 @@
 [package]
 name = "otp-rs"
-version = "0.1.0"
+version = "0.1.1"
 description = "RFC-complaint one-time password algorithms written in Rust"
 keywords = ["otp", "one-time-password", "rust"]
 authors = ["Russell Wong"]
