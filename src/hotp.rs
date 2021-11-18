@@ -31,7 +31,7 @@ impl HOTP {
   }
 
   pub fn generate(&self, counter: u64) -> Result<u32> {
-    let mut hmac = Hmac::<Sha1>::new_from_slice(&self.secret).expect("Invalid secret");
+    let mut hmac = Hmac::<Sha1>::new_from_slice(self.secret.as_slice()).expect("Invalid secret");
 
     hmac.update(&counter.to_be_bytes());
     let result = hmac.finalize();
@@ -41,7 +41,7 @@ impl HOTP {
       .try_into()
       .expect("Invalid digest");
     let code = u32::from_be_bytes(code);
-    Ok(code & 0x7fffffff % 1000000)
+    Ok((code & 0x7fffffff) % 1000000)
   }
 
   pub fn verify(&self, code: u32, last: u64, trials: u64) -> bool {
