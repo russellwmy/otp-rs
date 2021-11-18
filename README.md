@@ -2,7 +2,7 @@
 
 RFC-complaint one-time password algorithms written in Rust.
 
-The HMAC-based one-time password algorithm is implemented as per (RFC4226)[http://tools.ietf.org/html/rfc4226]. The time-based one-time password algorithm is implemented as per (RFC 6238)[http://tools.ietf.org/html/rfc6238].
+The HMAC-based one-time password algorithm is implemented as per [RFC4226](http://tools.ietf.org/html/rfc4226). The time-based one-time password algorithm is implemented as per [RFC 6238](http://tools.ietf.org/html/rfc6238).
 
 # Installation
 
