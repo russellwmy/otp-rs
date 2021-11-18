@@ -25,11 +25,11 @@ otp-rs= "0.1"
 
 ```
 let otp = TOTP::new("secret");
-/// Generate code with counter 0 input and current timestamp
+/// Generate code with period and current timestamp
  let timestamp = SystemTime::now()
     .duration_since(UNIX_EPOCH)
     .unwrap()
     .as_secs();
-  let code = otp.generate(0, timestamp);
+  let code = otp.generate(30, timestamp);
   println!("{}", code);
 ```
