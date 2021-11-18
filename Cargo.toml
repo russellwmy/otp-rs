@@ -1,0 +1,16 @@
+[package]
+name = "otp-rs"
+version = "0.1.0"
+description = "RFC-complaint one-time password algorithms written in Rust"
+keywords = ["otp", "one-time-password", "rust"]
+authors = ["Russell Wong"]
+homepage = ""
+repository = ""
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+hmac = "0.11"
+sha-1 = "0.9.8"
+data-encoding = "2.3.2"
