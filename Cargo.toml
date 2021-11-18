@@ -4,8 +4,8 @@ version = "0.1.0"
 description = "RFC-complaint one-time password algorithms written in Rust"
 keywords = ["otp", "one-time-password", "rust"]
 authors = ["Russell Wong"]
-homepage = ""
-repository = ""
+homepage = "https://github.com/russellwmy/otp-rs"
+repository = "https://github.com/russellwmy/otp-rs"
 license = "MIT"
 edition = "2021"
 
