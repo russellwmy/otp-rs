@@ -14,11 +14,11 @@ otp-rs= "0.1"
 # HOTP Example
 
 ```
-  let otp = HOTP::new("secret");
-  /// Generate code with counter 0 input
-  let code = otp.generate(0).unwrap();
+let otp = HOTP::new("secret");
+/// Generate code with counter 0 input
+let code = otp.generate(0).unwrap();
 
-  println!("{}", code);
+println!("{}", code);
 ```
 
 # TOTP Example
@@ -26,10 +26,10 @@ otp-rs= "0.1"
 ```
 let otp = TOTP::new("secret");
 /// Generate code with period and current timestamp
- let timestamp = SystemTime::now()
-    .duration_since(UNIX_EPOCH)
-    .unwrap()
-    .as_secs();
-  let code = otp.generate(30, timestamp);
-  println!("{}", code);
+let timestamp = SystemTime::now()
+  .duration_since(UNIX_EPOCH)
+  .unwrap()
+  .as_secs();
+let code = otp.generate(30, timestamp);
+println!("{}", code);
 ```
